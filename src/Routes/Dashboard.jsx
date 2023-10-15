@@ -1,6 +1,8 @@
 import { signOut,getAuth } from "firebase/auth"
 import { HiOutlineArrowCircleRight } from "react-icons/hi";
 import Logo from "../assets/Rectangle.png"
+import { Link } from "react-router-dom";
+
 
 export default function Dashboard(){
     const auth = getAuth()
@@ -42,8 +44,9 @@ export default function Dashboard(){
         
     <div className="flex flex-col items-center justify-center mt-48">
             <div class="text-teal-600 text-teal-300">
-              <img src={Logo} alt="paycheck logo" className='w-32 h-10' />
-
+            <Link to="/">
+      <img src={Logo} alt="paycheck logo" className='w-32 h-10' />
+    </Link>    
             </div>
 
             <p class="mt-4 max-w-xs text-left text-gray-100">
